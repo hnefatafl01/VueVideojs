@@ -29,14 +29,14 @@
           preload="auto"
           width="640"
           height="268"
-          data-setup='{"techOrder":["youtube"], "src": "url" }'>
+          data-setup='{"techOrder":["youtube"], "src": "http://www.youtube.com/watch?v=xYemnKEKx0c" }'>
         </video>
       </div>
     `,
     data: function() {
       return {
-        player: null,
-        url: "http://www.youtube.com/watch?v=xYemnKEKx0c"
+        player: null
+        // url: "http://www.youtube.com/watch?v=xYemnKEKx0c"
       }
     },
     ready: function() {
