@@ -6,8 +6,8 @@
 
 template #vid-container {
   background-color: #FFFFFF;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 800px;
 }
 
 #lcd {

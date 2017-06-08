@@ -21,8 +21,27 @@
 
   var screen = Vue.extend({
   	template: `
-      <div id="lcd"></div>
-    `
+      <div>
+        <video
+          id="my-player"
+          class="video-js"
+          controls
+          preload="auto"
+          width="640"
+          height="268"
+          data-setup='{"techOrder":["youtube"], "src": "url" }'>
+        </video>
+      </div>
+    `,
+    data: function() {
+      return {
+        player: null,
+        url: "http://www.youtube.com/watch?v=xYemnKEKx0c"
+      }
+    },
+    ready: function() {
+      var player = videojs('my-player');
+    }
   })
 
   var scrubber = Vue.extend({
@@ -49,8 +68,6 @@
       }
     }
   })
-
-
 
   Vue.component('vid-container', vidContainer);
   Vue.component('screen', screen);
