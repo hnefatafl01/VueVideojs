@@ -22,3 +22,10 @@ template #vid-container {
   max-width: 200px;
   background-color: #000000;
 }
+
+.video-js .vjs-big-play-button {
+    display: none;
+}
+/*.video-js .vjs-control-bar {
+    display: flex;
+}*/

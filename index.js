@@ -1,21 +1,18 @@
 (function() {
   'use strict';
 
-  var obj = {
-    message: "Sup"
-  }
-  // document.addEventListener('DOMContentLoaded', scrubTimer, false);
-
   var vidContainer = Vue.extend({
   	template: `
       <div>
-        <h1>{{ message }}</h1>
         <screen></screen>
         <scrubber></scrubber>
+        <h1>{{ message }}</h1>
       </div>
     `,
     data: function() {
-      return obj;
+      return {
+        message: "Sup"
+      }
     }
   })
 
@@ -29,14 +26,14 @@
           preload="auto"
           width="640"
           height="268"
-          data-setup='{"techOrder":["youtube"], "src": "http://www.youtube.com/watch?v=xYemnKEKx0c" }'>
+          data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "http://www.youtube.com/watch?v=xYemnKEKx0c"}], "youtube": { "customVars": { "wmode": "transparent" } } }'>
         </video>
       </div>
     `,
     data: function() {
       return {
         player: null
-        // url: "http://www.youtube.com/watch?v=xYemnKEKx0c"
+        // ,url: "http://www.youtube.com/watch?v=xYemnKEKx0c"
       }
     },
     ready: function() {
